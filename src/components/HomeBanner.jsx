@@ -12,7 +12,7 @@ export default function HomeBanner() {
             negócio.
             <Image
               alt="Risco de lápis sublinhando a palavra negócio"
-              className="absolute bottom-0 rotate-180 z-[-1]"
+              className="absolute bottom-[-7px] rotate-180 z-[-1]"
               src="/pencil-underline.png"
               width={161}
               height={20}
