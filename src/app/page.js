@@ -1,9 +1,11 @@
 import HomeBanner from "@/components/HomeBanner";
+import Solutions from "@/components/Solutions";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <HomeBanner />
-    </div>
+      {/* <Solutions /> */}
+    </>
   );
 }

@@ -10,15 +10,6 @@ module.exports = {
       width: {
         content: '1280px'
       },
-      height: {
-        menu: '80px'
-      },
-      padding: {
-        menu: '80px'
-      },
-      margin: {
-        menu: '80px'
-      }
     },
   },
   plugins: [],

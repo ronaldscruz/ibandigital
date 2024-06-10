@@ -40,12 +40,12 @@ export default function RootLayout({ children }) {
       <Head>
         <link rel="shortcut icon" href="/favicon.ico" sizes="any" />
       </Head>
-      <body className={`${montserrat.className} max-w-screen overflow-x-hidden`}>
+      <body className={`${montserrat.className} flex flex-col`}>
         <header>
           <Navbar />
         </header>
 
-        <main>
+        <main className="flex flex-col">
           {children}
         </main>
         
@@ -53,8 +53,6 @@ export default function RootLayout({ children }) {
           
         </footer>
       </body>
-        
-      
     </html>
   );
 }
