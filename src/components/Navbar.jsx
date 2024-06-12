@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import PlaceOrderButton from "./PlaceOrderButton";
+import Link from "next/link";
 
 const DEFAULT_MENU_OPTIONS = [
   {
@@ -24,7 +25,7 @@ export default function Navbar() {
 
   const renderOptions = (options = []) => {
     return options.map((item, index) => (
-      <li className="font-medium text-white" key={index}>
+      <li className="font-medium text-white hover:underline" key={index}>
         <a href={item.url}>{item.name}</a>
       </li>
     ));
@@ -41,12 +42,14 @@ export default function Navbar() {
   return (
     <nav className="flex justify-center py-6 w-full z-20 absolute">
       <div className="flex justify-between items-center h-full w-content max-w-full xl:p-0 px-6">
-        <Image
-          src="/logo-full-dark.png"
-          alt="Iban Digital"
-          width={120}
-          height={80}
-        />
+        <Link href="/">
+          <Image
+            src="/logo-full-dark.png"
+            alt="Iban Digital"
+            width={120}
+            height={80}
+          />
+        </Link>
         <ul className="inline-flex gap-8 xl:flex hidden">
           {renderOptions(DEFAULT_MENU_OPTIONS)}
         </ul>

@@ -7,7 +7,7 @@ export default function PlaceOrderButton({ className = "" }) {
       className="cursor-pointer "
     >
       <button
-        className={`bg-blue-500 h-12 px-6 border-radius text-white font-medium rounded-full ${className}`}
+        className={`bg-blue-600 h-12 px-6 border-radius text-white font-medium rounded-full hover:bg-blue-700 ease-in-out duration-200 ${className}`}
       >
         Solicite um orçamento
       </button>
