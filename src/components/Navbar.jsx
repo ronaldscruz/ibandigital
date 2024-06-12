@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useState } from "react";
 import PlaceOrderButton from "./PlaceOrderButton";
 import Link from "next/link";
+import { AnimatePresence, motion } from "framer-motion";
+import MobileMenu from "./MobileMenu";
 
 const DEFAULT_MENU_OPTIONS = [
   {
@@ -26,14 +28,6 @@ export default function Navbar() {
   const renderOptions = (options = []) => {
     return options.map((item, index) => (
       <li className="font-medium text-white hover:underline" key={index}>
-        <a href={item.url}>{item.name}</a>
-      </li>
-    ));
-  };
-
-  const renderMobileOptions = (options = []) => {
-    return options.map((item, index) => (
-      <li className="text-black flex h-16 items-center" key={index}>
         <a href={item.url}>{item.name}</a>
       </li>
     ));
@@ -70,11 +64,11 @@ export default function Navbar() {
                 height={24}
               />
             </button>
-            {mobileMenuOpen && (
-              <ul className="mobile-menu absolute right-[24px] top-[80px] w-[180px] bg-white text-black rounded-l-xl rounded-br-xl px-4 flex flex-col divide-y">
-                {renderMobileOptions(DEFAULT_MENU_OPTIONS)}
-              </ul>
-            )}
+            <MobileMenu
+              open={mobileMenuOpen}
+              options={DEFAULT_MENU_OPTIONS}
+              onClose={() => setMobileMenuOpen(false)}
+            />
           </div>
         </div>
       </div>
