@@ -1,4 +1,4 @@
-import Image from "next/image";
+"use client";
 
 import BrowserIcon from "./assets/browser.svg";
 import MobileIcon from "./assets/mobile.svg";
@@ -8,6 +8,9 @@ import WritingIcon from "./assets/writing.svg";
 import BackgroundElements from "./assets/background-elements.svg";
 
 import PlaceOrderButton from "../common/PlaceOrderButton/PlaceOrderButton";
+import { AnimatePresence, motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import SolutionCard from "./SolutionCard";
 
 const solutionsData = [
   {
@@ -127,31 +130,20 @@ const solutionsData = [
 ];
 
 export default function Solutions() {
+  const orderButtonRef = useRef();
+  const orderButtonInView = useInView(orderButtonRef, {
+    once: true,
+  });
+
   const renderCards = (solutions = []) => {
-    return solutions.map(({ title, helper, icon, services = [] }) => (
-      <article
+    return solutions.map(({ title, icon, services = [] }, index) => (
+      <SolutionCard
         key={title}
-        className="p-6 shadow-lg rounded-xl w-[300px] h-96 flex flex-col items-center z-20 bg-white"
-      >
-        <Image
-          className="mb-6 flex pointer-events-none"
-          src={icon.path}
-          alt={icon.alt}
-          width={80}
-          height={80}
-        />
-        <h2 className="text-lg font-medium mb-4">{title}</h2>
-        <ul className="w-full">
-          {services.map((service) => (
-            <li key={title + service.name} title={service.description}>
-              <span className="text-2xl font-bold text-blue-500 mr-2">
-                &rsaquo;
-              </span>
-              {service.name}
-            </li>
-          ))}
-        </ul>
-      </article>
+        title={title}
+        icon={icon}
+        services={services}
+        index={index}
+      />
     ));
   };
 
@@ -182,7 +174,23 @@ export default function Solutions() {
           {renderCards(solutionsData)}
         </div>
 
-        <PlaceOrderButton />
+        <div ref={orderButtonRef}>
+          <AnimatePresence>
+            {orderButtonInView && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: [0, 1.2, 1] }}
+                transition={{
+                  type: "spring",
+                  delay: 0.7,
+                  duration: [0, 0.2, 0],
+                }}
+              >
+                <PlaceOrderButton />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
       </div>
     </section>
   );

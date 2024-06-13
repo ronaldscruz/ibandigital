@@ -5,6 +5,7 @@ import { useState } from "react";
 import PlaceOrderButton from "../../common/PlaceOrderButton/PlaceOrderButton";
 import Link from "next/link";
 import MobileMenu from "./MobileMenu";
+import { motion } from "framer-motion";
 
 const DEFAULT_MENU_OPTIONS = [
   {
@@ -50,7 +51,8 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <PlaceOrderButton className="md:block hidden" />
           <div className="xl:hidden block">
-            <button
+            <motion.button
+              whileTap={{ scale: 0.87 }}
               className="cursor-pointer border border-white rounded-full p-2"
               onClick={() => {
                 setMobileMenuOpen(!mobileMenuOpen);
@@ -62,7 +64,7 @@ export default function Navbar() {
                 width={24}
                 height={24}
               />
-            </button>
+            </motion.button>
             <MobileMenu
               open={mobileMenuOpen}
               options={DEFAULT_MENU_OPTIONS}
