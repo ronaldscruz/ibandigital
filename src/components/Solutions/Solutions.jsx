@@ -7,7 +7,7 @@ import WritingIcon from "./assets/writing.svg";
 
 import BackgroundElements from "./assets/background-elements.svg";
 
-import PlaceOrderButton from "../common/PlaceOrderButton";
+import PlaceOrderButton from "../common/PlaceOrderButton/PlaceOrderButton";
 
 const solutionsData = [
   {
@@ -134,7 +134,7 @@ export default function Solutions() {
         className="p-6 shadow-lg rounded-xl w-[300px] h-96 flex flex-col items-center z-20 bg-white"
       >
         <Image
-          className="mb-6 flex"
+          className="mb-6 flex pointer-events-none"
           src={icon.path}
           alt={icon.alt}
           width={80}
@@ -159,7 +159,7 @@ export default function Solutions() {
     <section className="flex w-full h-[768px] w-full flex justify-center">
       <div className="w-content flex flex-col items-center h-full py-14 relative">
         <Image
-          className="absolute top-[80px] left-[-48px] z-10"
+          className="absolute top-[80px] left-[-48px] z-10 pointer-events-none"
           src={BackgroundElements}
           width={204}
           height={188}
@@ -167,14 +167,14 @@ export default function Solutions() {
         />
 
         <Image
-          className="absolute bottom-[120px] right-[-48px] z-10"
+          className="absolute bottom-[120px] right-[-48px] z-10 pointer-events-none"
           src={BackgroundElements}
           width={284}
           height={358}
           alt="Elementos de fundo: padrão de bolinhas azuis"
         />
 
-        <h1 className="font-bold text-4xl mb-6 text-blue-500 mb-14 bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-600">
+        <h1 className="font-bold text-5xl mb-6 mb-14 text-transparent py-2 bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-600">
           Soluções
         </h1>
 

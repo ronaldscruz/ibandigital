@@ -1,3 +1,5 @@
+import "./PlaceOrderButton.styles.css";
+
 export default function PlaceOrderButton({ className = "" }) {
   return (
     <a
@@ -7,10 +9,8 @@ export default function PlaceOrderButton({ className = "" }) {
       className="cursor-pointer"
       aria-label="Solicite um orçamento"
     >
-      <button
-        className={`bg-blue-600 h-12 px-6 border-radius text-white font-medium rounded-full hover:bg-blue-700 ease-in-out duration-200 ${className}`}
-      >
-        Solicite um orçamento
+      <button className="place-order-button">
+        <span className="place-order-button-text">Solicite um orçamento</span>
       </button>
     </a>
   );

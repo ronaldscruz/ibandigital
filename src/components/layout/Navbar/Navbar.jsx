@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import PlaceOrderButton from "../../common/PlaceOrderButton";
+import PlaceOrderButton from "../../common/PlaceOrderButton/PlaceOrderButton";
 import Link from "next/link";
 import MobileMenu from "./MobileMenu";
 
