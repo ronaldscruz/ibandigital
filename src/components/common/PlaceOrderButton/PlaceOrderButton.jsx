@@ -9,9 +9,11 @@ export default function PlaceOrderButton({ className = "" }) {
       className="cursor-pointer"
       aria-label="Solicite um orçamento"
     >
-      <button className="place-order-button">
-        <span className="place-order-button-text">Solicite um orçamento</span>
-      </button>
+      <div className={className}>
+        <button className={`place-order-button ${className}`}>
+          <span className="place-order-button-text">Solicite um orçamento</span>
+        </button>
+      </div>
     </a>
   );
 }

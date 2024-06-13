@@ -23,7 +23,7 @@ export default function HomeBanner() {
           </span>
         </h1>
 
-        <div className="w-full flex justify-center mt-4 md:hidden">
+        <div className="w-full flex justify-center mt-6 md:hidden">
           <PlaceOrderButton />
         </div>
       </div>

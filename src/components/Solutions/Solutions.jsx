@@ -156,10 +156,10 @@ export default function Solutions() {
   };
 
   return (
-    <section className="flex w-full h-[768px] w-full flex justify-center">
+    <section className="flex w-full min-h-[768px] w-full flex justify-center">
       <div className="w-content flex flex-col items-center h-full py-14 relative">
-        <Image
-          className="absolute top-[80px] left-[-48px] z-10 pointer-events-none"
+        {/* <Image
+          className="absolute top-[80px] left-[-48px] z-10 pointer-events-none md:flex hidden"
           src={BackgroundElements}
           width={204}
           height={188}
@@ -167,18 +167,18 @@ export default function Solutions() {
         />
 
         <Image
-          className="absolute bottom-[120px] right-[-48px] z-10 pointer-events-none"
+          className="absolute bottom-[120px] right-[-48px] z-10 pointer-events-none md:flex hidden"
           src={BackgroundElements}
           width={284}
           height={358}
           alt="Elementos de fundo: padrão de bolinhas azuis"
-        />
+        /> */}
 
         <h1 className="font-bold text-5xl mb-6 mb-14 text-transparent py-2 bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-600">
           Soluções
         </h1>
 
-        <div className="inline-flex flex-nowrap gap-6 mb-14">
+        <div className="inline-flex flex-wrap gap-6 mb-14 w-full justify-center xl:px-0 px-6">
           {renderCards(solutionsData)}
         </div>
 
