@@ -3,7 +3,7 @@ import PlaceOrderButton from "./common/PlaceOrderButton/PlaceOrderButton";
 
 export default function HomeBanner() {
   return (
-    <section className="flex w-full h-[87vh] justify-center bg-black/75 bg-[url('/home-banner-background.webp')] bg-cover after:content-[' '] after:absolute after:top-0 after:left-0 after:bg-black/75 after:w-full after:h-[87vh]">
+    <section className="flex w-full h-[92vh] justify-center bg-black/75 bg-[url('/home-banner-background.webp')] bg-cover after:content-[' '] after:absolute after:top-0 after:left-0 after:bg-black/75 after:w-full after:h-[92vh]">
       <div className="flex flex-col justify-center items-start h-full w-content max-w-full z-10 xl:p-0 p-6">
         <h1
           className="text-white font-bold text-3xl md:text-4xl mb-6 w-[640px] max-w-full leading-normal"
