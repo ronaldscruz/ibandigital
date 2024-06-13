@@ -1,7 +1,6 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
 
 export default function MobileMenu({
   open = false,
@@ -34,7 +33,7 @@ export default function MobileMenu({
               transition: {
                 type: "spring",
                 bounce: 0,
-                duration: 0.7,
+                duration: 0.2,
               },
             }}
             exit={{
@@ -42,11 +41,10 @@ export default function MobileMenu({
               transition: {
                 type: "spring",
                 bounce: 0,
-                duration: 0.2,
+                duration: 0.4,
               },
               opacity: 0,
             }}
-            transition={{ type: "spring", duration: 0.2 }}
             className="mobile-menu absolute right-[24px] top-[80px] w-[180px] bg-white text-black rounded-l-xl rounded-br-xl px-4 flex flex-col divide-y"
           >
             {renderMobileOptions(options)}
