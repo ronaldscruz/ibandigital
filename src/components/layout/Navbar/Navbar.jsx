@@ -2,18 +2,17 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import PlaceOrderButton from "./PlaceOrderButton";
+import PlaceOrderButton from "../../common/PlaceOrderButton";
 import Link from "next/link";
-import { AnimatePresence, motion } from "framer-motion";
 import MobileMenu from "./MobileMenu";
 
 const DEFAULT_MENU_OPTIONS = [
   {
-    name: "Mídias Sociais",
+    name: "Soluções",
     url: "/social-media",
   },
   {
-    name: "Dados & BI",
+    name: "Sobre nós",
     url: "/data-analytics",
   },
   {
