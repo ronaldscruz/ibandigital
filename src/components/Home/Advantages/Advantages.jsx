@@ -82,8 +82,8 @@ export default function Advantages() {
 
   const renderAdvantages = () => {
     return advantages.map((advantage, index) => (
-      <li key={index} className="text-white md:w-[280px] w-full">
-        <div className="inline-flex items-center mb-2">
+      <li key={index} className="text-white md:w-[280px] w-full md:pb-0 pb-4">
+        <div className="inline-flex items-center mb-3">
           <Image
             src={advantage.icon}
             width={26}
@@ -100,17 +100,17 @@ export default function Advantages() {
   };
 
   return (
-    <section className="relative flex w-full min-h-[768px] w-full flex justify-center bg-[url('/team.webp')] bg-[url('/home-banner-background.webp')] bg-cover after:content-[' '] after:absolute after:top-0 after:left-0 after:bg-blue-800/90 after:w-full after:h-full">
-      <div className="w-content max-w-full flex flex-col items-center h-full py-14 z-10 px-6">
-        <h1 className="font-light md:text-2xl text-xl mb-6 py-2 text-white">
+    <section className="relative flex w-full w-full flex justify-center py-20 bg-[url('/team.webp')] bg-[url('/home-banner-background.webp')] bg-cover after:content-[' '] after:absolute after:top-0 after:left-0 after:bg-blue-800/90 after:w-full after:h-full">
+      <div className="w-content max-w-full flex flex-col items-center h-full z-10 md:px-0 px-6">
+        <h1 className="font-light md:text-2xl text-2xl text-white">
           Nossos diferenciais
         </h1>
-        <h2 className="font-medium md:text-4xl text-2xl mb-14 py-2 text-white w-[768px] max-w-full text-center">
+        <h2 className="font-medium md:text-5xl text-4xl my-20 text-white w-[800px] max-w-full text-center md:leading-normal leading-normal">
           Por que a Iban é a melhor escolha para o seu negócio?
         </h2>
         <div
           ref={ref}
-          className="flex justify-center lg:w-[920px] md:w-[640px] max-w-full"
+          className="flex justify-center lg:w-[920px] md:w-[640px] max-w-full pb-8"
         >
           <ul
             ref={scope}

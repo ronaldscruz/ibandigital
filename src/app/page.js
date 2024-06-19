@@ -1,6 +1,7 @@
-import Advantages from "@/components/Home/Advantages/Advantages";
+import Advantages from "@/components/Home/Advantages";
+import Contact from "@/components/Home/Contact";
 import HomeBanner from "@/components/Home/HomeBanner";
-import Solutions from "@/components/Home/Solutions/Solutions";
+import Solutions from "@/components/Home/Solutions";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <HomeBanner />
       <Solutions />
       <Advantages />
+      <Contact />
     </>
   );
 }

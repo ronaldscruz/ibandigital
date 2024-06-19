@@ -8,8 +8,14 @@ import WritingIcon from "./assets/writing.svg";
 import BackgroundElements from "./assets/background-elements.svg";
 
 import PlaceOrderButton from "../../common/PlaceOrderButton/PlaceOrderButton";
-import { AnimatePresence, motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import {
+  AnimatePresence,
+  motion,
+  useAnimate,
+  useInView,
+  stagger,
+} from "framer-motion";
+import { useEffect, useRef } from "react";
 import SolutionCard from "./SolutionCard";
 
 const solutionsData = [
@@ -129,11 +135,34 @@ const solutionsData = [
   },
 ];
 
+const staggerCards = stagger(0.2, { startDelay: 0.2 });
+
+function useAnimateCards(inView) {
+  const [scope, animate] = useAnimate();
+
+  useEffect(() => {
+    animate("article", inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }, {
+      duration: 0.4,
+      delay: inView ? staggerCards : 0,
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [inView]);
+
+  return scope;
+}
+
 export default function Solutions() {
   const orderButtonRef = useRef();
   const orderButtonInView = useInView(orderButtonRef, {
     once: true,
   });
+
+  const cardsRef = useRef();
+  const cardsInView = useInView(cardsRef, {
+    once: true,
+  });
+
+  const cardsScope = useAnimateCards(cardsInView);
 
   const renderCards = (solutions = []) => {
     return solutions.map(({ title, icon, services = [] }, index) => (
@@ -148,8 +177,8 @@ export default function Solutions() {
   };
 
   return (
-    <section className="flex w-full min-h-[768px] w-full flex justify-center ">
-      <div className="w-content flex flex-col items-center h-full py-14 relative">
+    <section className="flex w-full w-full flex justify-center items-center py-20">
+      <div className="w-content flex flex-col items-center relative md:px-0 px-6">
         {/* <Image
           className="absolute top-[80px] left-[-48px] z-10 pointer-events-none md:flex hidden"
           src={BackgroundElements}
@@ -166,12 +195,20 @@ export default function Solutions() {
           alt="Elementos de fundo: padrão de bolinhas azuis"
         /> */}
 
-        <h1 className="font-medium md:text-4xl text-3xl text-center mb-14 text-transparent py-2 bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-600">
+        <h1 className="font-medium md:text-5xl text-4xl text-center text-transparent py-2 bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-600 leading-normal">
           Soluções que fazem a diferença
         </h1>
 
-        <div className="inline-flex flex-wrap gap-6 mb-14 w-full justify-center xl:px-0 px-6">
-          {renderCards(solutionsData)}
+        <div
+          ref={cardsRef}
+          className="my-20 lg:w-[640px] xl:w-full justify-center items-center"
+        >
+          <div
+            ref={cardsScope}
+            className="inline-flex flex-wrap gap-6 w-full justify-center items-center max-w-full"
+          >
+            {renderCards(solutionsData)}
+          </div>
         </div>
 
         <div ref={orderButtonRef}>
