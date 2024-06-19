@@ -19,7 +19,8 @@
 .place-order-button:hover {
   background: white; /* hover:bg-white */
   color: transparent; /* hover:text-transparent */
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* hover:shadow-lg */
+  /* box shadow same gradient as text background, placed on the same position as the button,w ithout dislocation */
+  box-shadow: 0 0 16px -8px #3b82f6, 0 0 16px -8px #6366f1; /* hover:shadow-lg */
 }
 
 .place-order-button:hover .place-order-button-text {

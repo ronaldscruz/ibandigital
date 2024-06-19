@@ -1,5 +1,5 @@
 import Image from "next/image";
-import PlaceOrderButton from "./common/PlaceOrderButton/PlaceOrderButton";
+import PlaceOrderButton from "../common/PlaceOrderButton/PlaceOrderButton";
 
 export default function HomeBanner() {
   return (

@@ -7,7 +7,7 @@ import WritingIcon from "./assets/writing.svg";
 
 import BackgroundElements from "./assets/background-elements.svg";
 
-import PlaceOrderButton from "../common/PlaceOrderButton/PlaceOrderButton";
+import PlaceOrderButton from "../../common/PlaceOrderButton/PlaceOrderButton";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import SolutionCard from "./SolutionCard";
@@ -148,7 +148,7 @@ export default function Solutions() {
   };
 
   return (
-    <section className="flex w-full min-h-[768px] w-full flex justify-center">
+    <section className="flex w-full min-h-[768px] w-full flex justify-center ">
       <div className="w-content flex flex-col items-center h-full py-14 relative">
         {/* <Image
           className="absolute top-[80px] left-[-48px] z-10 pointer-events-none md:flex hidden"
@@ -166,8 +166,8 @@ export default function Solutions() {
           alt="Elementos de fundo: padrão de bolinhas azuis"
         /> */}
 
-        <h1 className="font-bold text-5xl mb-6 mb-14 text-transparent py-2 bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-600">
-          Soluções
+        <h1 className="font-medium md:text-4xl text-3xl text-center mb-14 text-transparent py-2 bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-600">
+          Soluções que fazem a diferença
         </h1>
 
         <div className="inline-flex flex-wrap gap-6 mb-14 w-full justify-center xl:px-0 px-6">
