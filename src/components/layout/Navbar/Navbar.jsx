@@ -38,7 +38,7 @@ export default function Navbar() {
       <div className="flex justify-between items-center h-full w-content max-w-full xl:p-0 px-6">
         <Link href="/">
           <Image
-            src="/logo-full-dark.png"
+            src="/logo-full-dark.webp"
             alt="Iban Digital"
             width={120}
             height={80}
