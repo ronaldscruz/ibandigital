@@ -19,7 +19,7 @@ export default function SolutionCard({ title, icon, services, index = 0 }) {
             className="p-5 shadow-lg rounded-xl w-[280px] h-96 flex flex-col items-center z-20 bg-white"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 + 0.1 * index, duration: 0.6 }}
+            transition={{ delay: 0.3 + 0.14 * index, duration: 0.6 }}
           >
             <Image
               className="mb-6 flex pointer-events-none"

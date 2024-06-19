@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 import ChatIcon from "./assets/chat.svg";
@@ -6,6 +8,8 @@ import LinkIcon from "./assets/link.svg";
 import TechIcon from "./assets/tech.svg";
 import TeamIcon from "./assets/team.svg";
 import ClockIcon from "./assets/clock.svg";
+import { useAnimate, useInView, stagger } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const advantages = [
   {
@@ -47,7 +51,35 @@ const advantages = [
   },
 ];
 
+const staggerAdvantages = stagger(0.2, { startDelay: 0.2 });
+
+function useSectionAnimation(inView) {
+  const [scope, animate] = useAnimate();
+
+  useEffect(() => {
+    animate(
+      "li",
+      inView
+        ? { opacity: 1, scale: 1, filter: "blur(0px)" }
+        : { opacity: 0, scale: 0.3, filter: "blur(20px)" },
+      {
+        duration: 0.4,
+        delay: inView ? staggerAdvantages : 0,
+      }
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [inView]);
+
+  return scope;
+}
+
 export default function Advantages() {
+  const ref = useRef();
+  const inView = useInView(ref, {
+    once: true,
+  });
+  const scope = useSectionAnimation(inView);
+
   const renderAdvantages = () => {
     return advantages.map((advantage, index) => (
       <li key={index} className="text-white md:w-[280px] w-full">
@@ -76,8 +108,14 @@ export default function Advantages() {
         <h2 className="font-medium md:text-4xl text-2xl mb-14 py-2 text-white w-[768px] max-w-full text-center">
           Por que a Iban é a melhor escolha para o seu negócio?
         </h2>
-        <div className="flex justify-center lg:w-[920px] md:w-[640px] max-w-full">
-          <ul className="inline-flex w-full lg:justify-between justify-center flex-wrap gap-8">
+        <div
+          ref={ref}
+          className="flex justify-center lg:w-[920px] md:w-[640px] max-w-full"
+        >
+          <ul
+            ref={scope}
+            className="inline-flex w-full lg:justify-between justify-center flex-wrap gap-8"
+          >
             {renderAdvantages()}
           </ul>
         </div>
