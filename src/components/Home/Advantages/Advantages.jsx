@@ -15,6 +15,19 @@ const advantages = [
       "Nossa missão é o sucesso do seu negócio. Estamos focados em gerar resultados para você.",
   },
   {
+    icon: TechIcon,
+    title: "Tecnologia",
+    description:
+      "Trabalhamos com tecnologia de ponta, para garantir que seu negócio saia na frente.",
+  },
+  {
+    icon: ClockIcon,
+    title: "Prazos",
+    description:
+      "O tempo é o bem mais valioso de todos. Por isso, cumprimos nossos prazos com agilidade.",
+  },
+
+  {
     icon: ChatIcon,
     title: "Atendimento",
     description: "Estamos sempre disponíveis para atender suas necessidades.",
@@ -25,23 +38,12 @@ const advantages = [
     description:
       "Cada negócio é único. Por isso, oferecemos soluções personalizadas de acordo com suas necessidades.",
   },
-  {
-    icon: TechIcon,
-    title: "Tecnologia",
-    description:
-      "Temos tecnologias de ponta, para garantir que seu negócio saia na frente.",
-  },
+
   {
     icon: TeamIcon,
     title: "Time especializado",
     description:
       "Contamos com profissionais de diversas áreas, carregando conhecimento e experiência para o seu projeto.",
-  },
-  {
-    icon: ClockIcon,
-    title: "Prazos",
-    description:
-      "O tempo é o bem mais valioso de todos. Por isso, cumprimos nossos prazos com agilidade.",
   },
 ];
 
@@ -74,7 +76,7 @@ export default function Advantages() {
         <h2 className="font-medium md:text-4xl text-2xl mb-14 py-2 text-white w-[768px] max-w-full text-center">
           Por que a Iban é a melhor escolha para o seu negócio?
         </h2>
-        <div className="flex justify-center w-[640px] max-w-full">
+        <div className="flex justify-center lg:w-[920px] md:w-[640px] max-w-full">
           <ul className="inline-flex w-full lg:justify-between justify-center flex-wrap gap-8">
             {renderAdvantages()}
           </ul>
