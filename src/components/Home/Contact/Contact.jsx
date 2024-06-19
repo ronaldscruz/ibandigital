@@ -15,6 +15,8 @@ export default function Contact() {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   const handleSubmit = async (e) => {
+    e.current.checkValidity();
+
     e.preventDefault();
 
     const form = document.querySelector("form");
@@ -76,6 +78,7 @@ export default function Contact() {
                   name="name"
                   placeholder="Nome"
                   className="w-full max-w-[480px] py-4 px-6 bg-gray-100 rounded-lg"
+                  required
                 />
                 <input
                   disabled={formSubmitted}
@@ -83,6 +86,7 @@ export default function Contact() {
                   name="email"
                   placeholder="Seu melhor e-mail"
                   className="w-full max-w-[480px] py-4 px-6 bg-gray-100 rounded-lg"
+                  required
                 />
                 <input
                   disabled={formSubmitted}
@@ -90,12 +94,28 @@ export default function Contact() {
                   name="phone"
                   placeholder="Telefone"
                   className="w-full max-w-[480px] py-4 px-6 bg-gray-100 rounded-lg"
+                  required
                 />
+                {/* select field that has 2 options: Telefone or E-mail, where user selects the method of answer that he prefers */}
+                <select
+                  disabled={formSubmitted}
+                  name="contact-method"
+                  className="w-full max-w-[480px] py-4 px-6 bg-gray-100 rounded-lg"
+                  required
+                >
+                  <option value="" disabled selected hidden>
+                    Método de contato
+                  </option>
+                  <option value="phone">Receber contato via ligação</option>
+                  <option value="whatsapp">Receber contato via WhatsApp</option>
+                  <option value="email">Receber contato via e-mail</option>
+                </select>
                 <textarea
                   disabled={formSubmitted}
                   name="message"
                   placeholder="Mensagem"
                   className="w-full max-w-[480px] py-4 px-6 bg-gray-100 rounded-lg"
+                  required
                 />
                 <button
                   disabled={formSubmitted || loading}
