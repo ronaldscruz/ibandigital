@@ -19,12 +19,12 @@ export const metadata = {
     siteName: SITE_NAME,
     images: [
       {
-        url: `${PRODUCTION_URL}/logo-thumb.png`,
+        url: `${PRODUCTION_URL}/logo-thumb.webp`,
         width: 800,
         height: 800,
       },
       {
-        url: `${PRODUCTION_URL}/logo-thumb.png`,
+        url: `${PRODUCTION_URL}/logo-thumb.webp`,
         width: 1600,
         height: 1600,
       },
