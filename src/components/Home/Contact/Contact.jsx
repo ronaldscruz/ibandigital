@@ -15,8 +15,6 @@ export default function Contact() {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   const handleSubmit = async (e) => {
-    e.current.checkValidity();
-
     e.preventDefault();
 
     const form = document.querySelector("form");
@@ -96,7 +94,6 @@ export default function Contact() {
                   className="w-full max-w-[480px] py-4 px-6 bg-gray-100 rounded-lg"
                   required
                 />
-                {/* select field that has 2 options: Telefone or E-mail, where user selects the method of answer that he prefers */}
                 <select
                   disabled={formSubmitted}
                   name="contact-method"

@@ -135,7 +135,7 @@ const solutionsData = [
   },
 ];
 
-const staggerCards = stagger(0.2, { startDelay: 0.2 });
+const staggerCards = stagger(0.2, { startDelay: 0.6 });
 
 function useAnimateCards(inView) {
   const [scope, animate] = useAnimate();
