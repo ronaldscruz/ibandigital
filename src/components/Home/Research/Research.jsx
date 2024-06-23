@@ -1,5 +1,6 @@
 "use client";
 
+import PlaceOrderButton from "@/components/common/PlaceOrderButton/PlaceOrderButton";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { useRef } from "react";
 import CountUp from "react-countup";
@@ -15,8 +16,13 @@ export default function Advantages() {
     once: true,
   });
 
+  const buttonRef = useRef();
+  const buttonInView = useInView(buttonRef, {
+    once: true,
+  });
+
   return (
-    <section className="relative flex w-full w-full flex justify-center text-white py-20 pb-[132px] bg-[url('/failure.webp')] bg-cover after:content-[' '] after:absolute after:top-0 after:left-0 after:bg-blue-800/70 after:w-full after:h-full">
+    <section className="relative flex w-full w-full flex justify-center text-white py-20 pb-[132px] bg-[url('/failure.webp')] bg-center bg-cover after:content-[' '] after:absolute after:top-0 after:left-0 after:bg-blue-800/70 after:w-full after:h-full">
       <div
         ref={sectionRef}
         className="w-content max-w-full flex flex-col items-center h-full z-10 md:px-0 px-6"
@@ -89,13 +95,33 @@ export default function Advantages() {
           </AnimatePresence>
         </div>
 
-        <p className="text-2xl flex flex-col items-center text-center gap-6">
+        <p className="text-2xl flex flex-col items-center text-center gap-6 mb-20">
           <span>Não deixe sua empresa se tornar estatística.</span>
           <span>
             Conte com a <span className="font-medium">Iban</span> para
             transformar seu futuro digital!
           </span>
         </p>
+
+        <div ref={buttonRef}>
+          <AnimatePresence>
+            {buttonInView ? (
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: [0, 1.2, 1] }}
+                transition={{
+                  type: "spring",
+                  delay: 0.4,
+                  duration: [0, 0.2, 0],
+                }}
+              >
+                <PlaceOrderButton reversed={true} />
+              </motion.div>
+            ) : (
+              <div style={{ height: "64px" }} />
+            )}
+          </AnimatePresence>
+        </div>
       </div>
     </section>
   );
