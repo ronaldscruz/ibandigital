@@ -16,6 +16,11 @@ export default function Advantages() {
     once: true,
   });
 
+  const buttonRef = useRef();
+  const buttonInView = useInView(buttonRef, {
+    once: true,
+  });
+
   return (
     <section className="relative flex w-full w-full flex justify-center text-white py-20 pb-[132px] bg-[url('/failure.webp')] bg-cover after:content-[' '] after:absolute after:top-0 after:left-0 after:bg-blue-800/70 after:w-full after:h-full">
       <div
@@ -98,7 +103,23 @@ export default function Advantages() {
           </span>
         </p>
 
-        <PlaceOrderButton reversed={true} />
+        <div ref={buttonRef}>
+          <AnimatePresence>
+            {buttonInView && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: [0, 1.2, 1] }}
+                transition={{
+                  type: "spring",
+                  delay: 0.7,
+                  duration: [0, 0.2, 0],
+                }}
+              >
+                <PlaceOrderButton reversed={true} />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
       </div>
     </section>
   );
