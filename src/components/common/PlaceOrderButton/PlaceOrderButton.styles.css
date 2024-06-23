@@ -1,26 +1,13 @@
 .place-order-button {
-  width: 310px;
-  height: 56px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #2563eb; /* bg-blue-600 */
-  border-radius: 9999px; /* rounded-full */
-  color: white; /* text-white */
-  font-weight: 500; /* font-medium */
-  background: linear-gradient(
-    to right,
-    #3b82f6,
-    #6366f1
-  ); /* bg-gradient-to-r from-blue-500 to-indigo-600 */
-  transition: all 0.3s ease-in-out; /* duration-300 ease-in-out */
+  background-color: #2563eb;
+  color: white;
+  background: linear-gradient(to right, #3b82f6, #6366f1);
 }
 
 .place-order-button:hover {
-  background: white; /* hover:bg-white */
-  color: transparent; /* hover:text-transparent */
-  /* box shadow same gradient as text background, placed on the same position as the button,w ithout dislocation */
-  box-shadow: 0 0 16px -8px #3b82f6, 0 0 16px -8px #6366f1; /* hover:shadow-lg */
+  background: white;
+  color: transparent;
+  box-shadow: 0 0 16px -8px #3b82f6, 0 0 16px -8px #6366f1;
 }
 
 .place-order-button:hover .place-order-button-text {
@@ -29,4 +16,32 @@
   background: linear-gradient(to right, #3b82f6, #6366f1);
   background-clip: text;
   font-weight: 600;
+}
+
+.place-order-button-reversed {
+  background-color: white;
+  color: transparent;
+  box-shadow: 0 0 16px -8px #3b82f6, 0 0 16px -8px #6366f1;
+}
+
+.place-order-button-reversed .place-order-button-text {
+  display: block;
+  color: transparent;
+  background: linear-gradient(to right, #3b82f6, #6366f1);
+  background-clip: text;
+  font-weight: 600;
+}
+
+.place-order-button-reversed:hover {
+  background: linear-gradient(to right, #3b82f6, #6366f1);
+  color: white;
+  box-shadow: none;
+}
+
+.place-order-button-reversed:hover .place-order-button-text {
+  display: block;
+  color: transparent;
+  background: white;
+  background-clip: text;
+  font-weight: 500;
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import PlaceOrderButton from "@/components/common/PlaceOrderButton/PlaceOrderButton";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { useRef } from "react";
 import CountUp from "react-countup";
@@ -89,13 +90,15 @@ export default function Advantages() {
           </AnimatePresence>
         </div>
 
-        <p className="text-2xl flex flex-col items-center text-center gap-6">
+        <p className="text-2xl flex flex-col items-center text-center gap-6 mb-20">
           <span>Não deixe sua empresa se tornar estatística.</span>
           <span>
             Conte com a <span className="font-medium">Iban</span> para
             transformar seu futuro digital!
           </span>
         </p>
+
+        <PlaceOrderButton reversed={true} />
       </div>
     </section>
   );
