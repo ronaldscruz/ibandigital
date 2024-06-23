@@ -47,7 +47,7 @@ export default function Contact() {
     <section className="relative flex w-full w-full flex justify-center py-20 pb-32 bg-white md:rounded-[64px] rounded-[32px] mt-[-64px]">
       <div
         ref={ref}
-        className="w-content max-w-full flex flex-col items-center h-full z-10 md:px-0 px-6"
+        className="w-content max-w-full flex flex-col items-center h-full z-10"
       >
         <div className="w-full flex flex-col items-center h-full z-10 md:px-0 px-6">
           <h1 className="font-light md:text-2xl text-2xl">Entre em contato</h1>
