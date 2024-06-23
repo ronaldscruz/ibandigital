@@ -22,7 +22,7 @@ export default function Advantages() {
   });
 
   return (
-    <section className="relative flex w-full w-full flex justify-center text-white py-20 pb-[132px] bg-[url('/failure.webp')] bg-cover after:content-[' '] after:absolute after:top-0 after:left-0 after:bg-blue-800/70 after:w-full after:h-full">
+    <section className="relative flex w-full w-full flex justify-center text-white py-20 pb-[132px] bg-[url('/failure.webp')] bg-center bg-cover after:content-[' '] after:absolute after:top-0 after:left-0 after:bg-blue-800/70 after:w-full after:h-full">
       <div
         ref={sectionRef}
         className="w-content max-w-full flex flex-col items-center h-full z-10 md:px-0 px-6"
@@ -105,18 +105,20 @@ export default function Advantages() {
 
         <div ref={buttonRef}>
           <AnimatePresence>
-            {buttonInView && (
+            {buttonInView ? (
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: [0, 1.2, 1] }}
                 transition={{
                   type: "spring",
-                  delay: 0.7,
+                  delay: 0.4,
                   duration: [0, 0.2, 0],
                 }}
               >
                 <PlaceOrderButton reversed={true} />
               </motion.div>
+            ) : (
+              <div style={{ height: "64px" }} />
             )}
           </AnimatePresence>
         </div>

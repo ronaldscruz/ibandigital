@@ -219,7 +219,7 @@ export default function Solutions() {
                 animate={{ opacity: 1, scale: [0, 1.2, 1] }}
                 transition={{
                   type: "spring",
-                  delay: 0.7,
+                  delay: 0.4,
                   duration: [0, 0.2, 0],
                 }}
               >
