@@ -9,7 +9,9 @@ export default function PlaceOrderButton({ className = "" }) {
     >
       <div className={className}>
         <button className={`place-order-button ${className}`}>
-          <span className="place-order-button-text">Solicite um orçamento</span>
+          <span className="place-order-button-text">
+            Quero transformar meu negócio
+          </span>
         </button>
       </div>
     </a>
