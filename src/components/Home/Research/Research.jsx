@@ -70,7 +70,7 @@ export default function Advantages() {
 
         <div ref={dataRef}>
           <AnimatePresence>
-            {dataInView && (
+            {dataInView ? (
               <motion.ul
                 className="flex flex-col"
                 initial={{ opacity: 0 }}
@@ -91,6 +91,8 @@ export default function Advantages() {
                   mais falências do que 2022
                 </li>
               </motion.ul>
+            ) : (
+              <div style={{ height: "460px" }} />
             )}
           </AnimatePresence>
         </div>
