@@ -3,7 +3,7 @@ import SolutionSection from "./SolutionSection";
 import AdsLottie from "./assets/lottie/ads.json";
 import SocialMediaLottie from "./assets/lottie/social-media.json";
 import WebLottie from "./assets/lottie/web.json";
-import BusinessLottie from "./assets/lottie/business.json";
+// import BusinessLottie from "./assets/lottie/business.json";
 import ContentLottie from "./assets/lottie/content.json";
 
 const solutionsData = [
@@ -39,16 +39,16 @@ const solutionsData = [
     ],
     illustration: SocialMediaLottie,
   },
-  {
-    title: "Business Intelligence",
-    details: [
-      "Insights valiosos para o crescimento",
-      "Estratégias mais eficientes",
-      "Melhoria contínua de desempenho",
-      "Decisões baseadas em dados",
-    ],
-    illustration: BusinessLottie,
-  },
+  // {
+  //   title: "Business Intelligence",
+  //   details: [
+  //     "Insights valiosos para o crescimento",
+  //     "Estratégias mais eficientes",
+  //     "Melhoria contínua de desempenho",
+  //     "Decisões baseadas em dados",
+  //   ],
+  //   illustration: BusinessLottie,
+  // },
   {
     title: "Marketing de Conteúdo",
     details: [
