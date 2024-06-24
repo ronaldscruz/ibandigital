@@ -10,15 +10,15 @@ import { motion } from "framer-motion";
 const DEFAULT_MENU_OPTIONS = [
   {
     name: "Soluções",
-    url: "/social-media",
+    url: "#solutions",
   },
   {
-    name: "Sobre nós",
-    url: "/data-analytics",
+    name: "Por que a Iban?",
+    url: "#why-iban",
   },
   {
-    name: "Criação de Sites",
-    url: "/web-development",
+    name: "Contato",
+    url: "#contact-form",
   },
 ];
 

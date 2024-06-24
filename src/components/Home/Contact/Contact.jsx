@@ -86,9 +86,10 @@ export default function Contact() {
               disabled={formSubmitted}
               name="contact-method"
               className="w-full max-w-[480px] py-4 px-6 bg-gray-100 rounded-lg"
+              defaultValue={""}
               required
             >
-              <option value="" disabled selected hidden>
+              <option value="" disabled hidden>
                 Método de contato
               </option>
               <option value="phone">Receber contato via ligação</option>
