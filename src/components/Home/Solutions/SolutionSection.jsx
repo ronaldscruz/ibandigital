@@ -76,7 +76,7 @@ export default function SolutionSection({
         </div>
         <div
           id="solution-illustration"
-          className="flex md:flex-1 max-h-[480px] max-w-screen"
+          className="flex md:flex-1 max-h-[480px] md:max-w-screen max-w-[90%]"
         >
           <Lottie animationData={illustration} />
         </div>

@@ -1,0 +1,23 @@
+/* animation to bounce a div every 2s, it bounces twice up and down */
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+#floating-whatsapp-button {
+  position: fixed;
+  z-index: 1000;
+  animation: bounce 2s infinite;
+}
