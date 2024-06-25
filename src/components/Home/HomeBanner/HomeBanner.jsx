@@ -9,14 +9,20 @@ export default function HomeBanner() {
     <section className="flex w-full h-[92vh] justify-center bg-black">
       <div className="flex flex-col justify-center items-center h-full w-content max-w-full z-10 xl:p-0 p-6">
         <h1
-          className="text-white font-bold text-3xl md:text-5xl mb-6 w-[800px] max-w-full leading-normal text-center leading-normal md:leading-normal"
+          className="text-white font-bold text-3xl md:text-5xl w-[800px] max-w-full leading-normal text-center leading-normal md:leading-normal"
           key="banner-title"
         >
           <span className="text-blue-500">Iban</span>, a revolução digital que
           seu negócio precisa
         </h1>
 
-        <div className="w-full flex justify-center mt-6 md:hidden">
+        <p className="w-[800px] max-w-full text-center text-white text-lg my-14 sm:leading-normal leading-normal">
+          Não fique para trás! Oferecemos soluções descomplicadas que realmente
+          funcionam, com resultados altamente{" "}
+          <span className="font-semibold">mensuráveis</span>.{" "}
+        </p>
+
+        <div className="w-full flex justify-center">
           <PlaceOrderButton />
         </div>
       </div>
