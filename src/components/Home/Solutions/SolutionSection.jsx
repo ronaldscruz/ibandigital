@@ -21,12 +21,10 @@ function useSectionAnimation(inView) {
         delay: 0.2,
       }
     );
-
     animate("li", inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }, {
       duration: 0.4,
       delay: inView ? staggerDetails : 0,
     });
-
     animate(
       "#solution-illustration",
       inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 40 },
@@ -66,7 +64,7 @@ export default function SolutionSection({
           </h1>
           <ul className="mb-8">
             {details.map((detail, index) => (
-              <li key={index} className="flex items-center">
+              <li key={index} className="flex items-center mb-2">
                 <span className="text-blue-600 text-2xl font-bold mr-2 pb-[2px]">
                   •
                 </span>{" "}
@@ -78,7 +76,7 @@ export default function SolutionSection({
         </div>
         <div
           id="solution-illustration"
-          className="flex flex-1 max-h-[480px] max-w-screen"
+          className="flex md:flex-1 max-h-[480px] md:max-w-screen max-w-[90%]"
         >
           <Lottie animationData={illustration} />
         </div>

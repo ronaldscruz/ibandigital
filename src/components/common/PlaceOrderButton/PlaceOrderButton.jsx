@@ -11,9 +11,9 @@ export default function PlaceOrderButton({ className = "", reversed = false }) {
         <button
           className={`${
             reversed ? "place-order-button-reversed" : "place-order-button"
-          } ${className} sm:w-[290px] w-[270px] h-[56px] flex items-center justify-center rounded-full ease-in-out transition-all duration-300`}
+          } ${className} sm:w-[290px] w-[255px] h-[56px] flex items-center justify-center rounded-full ease-in-out transition duration-600`}
         >
-          <span className="place-order-button-text sm:text-lg text-[17px] transition-all ease-in-out duration-100">
+          <span className="place-order-button-text sm:text-lg text-[16px] transition ease-in-out duration-200">
             Fale com um especialista
           </span>
         </button>

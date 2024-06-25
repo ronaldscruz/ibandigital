@@ -92,7 +92,7 @@ export default function Advantages() {
                 </li>
               </motion.ul>
             ) : (
-              <div style={{ height: "900px" }} />
+              <div style={{ height: "100vh" }} />
             )}
           </AnimatePresence>
         </div>
