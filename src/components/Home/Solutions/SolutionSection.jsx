@@ -2,8 +2,8 @@
 
 import PlaceOrderButton from "@/components/common/PlaceOrderButton/PlaceOrderButton";
 import { useInView, stagger, useAnimate } from "framer-motion";
-import Lottie from "lottie-react";
 import { useRef, useEffect } from "react";
+import Image from "next/image";
 
 const staggerDetails = stagger(0.2, { startDelay: 0.2 });
 
@@ -53,7 +53,7 @@ export default function SolutionSection({
     <div ref={ref}>
       <article
         ref={scope}
-        className="lg:w-[900px] max-w-screen lg:inline-flex flex lg:flex-row flex-col-reverse justify-between items-center mb-14"
+        className="lg:w-[900px] max-w-screen lg:inline-flex flex lg:flex-row flex-col-reverse justify-between items-center mb-20"
       >
         <div
           id="solution-details"
@@ -76,9 +76,13 @@ export default function SolutionSection({
         </div>
         <div
           id="solution-illustration"
-          className="flex md:flex-1 max-h-[480px] md:max-w-screen max-w-[90%]"
+          className="flex flex-1 lg:justify-end justify-center"
         >
-          <Lottie animationData={illustration} />
+          <Image
+            src={illustration}
+            alt={`Ilustração abstrata representando "${title}"`}
+            className="max-w-[240px] lg:max-w-[90%]"
+          />
         </div>
       </article>
     </div>

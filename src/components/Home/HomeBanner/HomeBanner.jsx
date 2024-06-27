@@ -13,7 +13,7 @@ export default function HomeBanner() {
           key="banner-title"
         >
           <span className="text-blue-500">Iban</span>, a revolução digital que
-          seu negócio precisa
+          seu negócio precisa.
         </h1>
 
         <p className="w-[800px] max-w-full text-center text-white text-lg my-14 sm:leading-normal leading-normal">
