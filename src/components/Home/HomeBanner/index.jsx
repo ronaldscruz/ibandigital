@@ -1,8 +1,7 @@
 import Image from "next/image";
-import PlaceOrderButton from "../../common/PlaceOrderButton/PlaceOrderButton";
+import PlaceOrderButton from "../../common/PlaceOrderButton";
 
 import BannerBackgroundImage from "./assets/home-banner-background.webp";
-import PencilUnderlineImage from "./assets/pencil-underline.png";
 
 export default function HomeBanner() {
   return (

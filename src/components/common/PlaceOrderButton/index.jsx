@@ -1,4 +1,4 @@
-import "./PlaceOrderButton.styles.css";
+import "./styles.css";
 
 export default function PlaceOrderButton({ className = "", reversed = false }) {
   return (

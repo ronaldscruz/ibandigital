@@ -2,7 +2,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
 import Navbar from "@/components/layout/Navbar";
-import FloatingWhatsappButton from "@/components/layout/FloatingWhatsappButton/FloatingWhatsappButton";
+import FloatingWhatsappButton from "@/components/layout/FloatingWhatsappButton";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 

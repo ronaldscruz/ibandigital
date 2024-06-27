@@ -1,4 +1,4 @@
-import SolutionSection from "./SolutionSection";
+import SolutionSection from "./components/SolutionSection";
 
 import AdsSvg from "./assets/ad.svg";
 import SocialMediaSvg from "./assets/social-media.svg";

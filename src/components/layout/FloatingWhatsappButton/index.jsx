@@ -1,4 +1,4 @@
-import "./FloatingWhatsappButton.styles.css";
+import "./styles.css";
 
 import WhatsappSvg from "./assets/whatsapp.svg";
 import Image from "next/image";
@@ -18,8 +18,7 @@ export default function FloatingWhatsappButton() {
           <Image
             src={WhatsappSvg}
             alt="Ícone do WhatsApp: clique para entrar em contato"
-            layout="fill"
-            className="p-4 2xl:p-5"
+            className="p-4 2xl:p-5 w-full h-full"
           />
         </button>
       </a>

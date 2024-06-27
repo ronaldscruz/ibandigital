@@ -1,6 +1,6 @@
 "use client";
 
-import PlaceOrderButton from "@/components/common/PlaceOrderButton/PlaceOrderButton";
+import PlaceOrderButton from "@/components/common/PlaceOrderButton";
 import { useInView, stagger, useAnimate } from "framer-motion";
 import { useRef, useEffect } from "react";
 import Image from "next/image";

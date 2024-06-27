@@ -1,6 +1,6 @@
 "use client";
 
-import PlaceOrderButton from "@/components/common/PlaceOrderButton/PlaceOrderButton";
+import PlaceOrderButton from "@/components/common/PlaceOrderButton";
 import { stagger, useInView, useAnimate } from "framer-motion";
 import { useEffect, useRef } from "react";
 import CountUp from "react-countup";

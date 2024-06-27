@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
-import MobileMenu from "./MobileMenu";
+import MobileMenu from "./components/MobileMenu";
 import { motion } from "framer-motion";
 
 const DEFAULT_MENU_OPTIONS = [
