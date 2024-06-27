@@ -66,6 +66,7 @@ export default function Contact() {
               name="name"
               placeholder="Nome"
               className="w-full max-w-[480px] py-4 px-6 bg-gray-100 rounded-lg"
+              aria-label="Nome"
               required
             />
             <input
@@ -74,6 +75,7 @@ export default function Contact() {
               name="email"
               placeholder="Seu melhor e-mail"
               className="w-full max-w-[480px] py-4 px-6 bg-gray-100 rounded-lg"
+              aria-label="E-mail"
               required
             />
             <input
@@ -82,6 +84,7 @@ export default function Contact() {
               name="phone"
               placeholder="Telefone"
               className="w-full max-w-[480px] py-4 px-6 bg-gray-100 rounded-lg"
+              aria-label="Telefone"
               required
             />
             <select
@@ -89,6 +92,7 @@ export default function Contact() {
               name="contact-method"
               className="w-full max-w-[480px] py-4 px-6 bg-gray-100 rounded-lg"
               defaultValue={""}
+              aria-label="Método de contato"
               required
             >
               <option value="" disabled hidden>
@@ -103,6 +107,7 @@ export default function Contact() {
               name="message"
               placeholder="Mensagem"
               className="w-full max-w-[480px] py-4 px-6 bg-gray-100 rounded-lg"
+              aria-label="Mensagem"
               required
             />
             <button
