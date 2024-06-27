@@ -81,7 +81,7 @@ export default function SolutionSection({
           <Image
             src={illustration}
             alt={`Ilustração abstrata representando "${title}"`}
-            className="max-w-[240px] lg:max-w-[90%]"
+            className="max-w-[240px] lg:max-w-[90%] pointer-events-none"
           />
         </div>
       </article>
