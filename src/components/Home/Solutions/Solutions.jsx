@@ -1,10 +1,9 @@
 import SolutionSection from "./SolutionSection";
 
-import AdsLottie from "./assets/lottie/ads.json";
-import SocialMediaLottie from "./assets/lottie/social-media.json";
-import WebLottie from "./assets/lottie/web.json";
-import BusinessLottie from "./assets/lottie/business.json";
-import ContentLottie from "./assets/lottie/content.json";
+import AdsSvg from "./assets/ad.svg";
+import SocialMediaSvg from "./assets/social-media.svg";
+import WebSvg from "./assets/web.svg";
+import ContentSvg from "./assets/content.svg";
 
 const solutionsData = [
   {
@@ -16,7 +15,7 @@ const solutionsData = [
       "Maior conversão de visitantes em clientes",
       "Design atrativo e funcional",
     ],
-    illustration: WebLottie,
+    illustration: WebSvg,
   },
   {
     title: "Tráfego Pago",
@@ -27,7 +26,7 @@ const solutionsData = [
       "Alvo preciso nos clientes certos",
       "Google, Instagram, Facebook e outras plataformas",
     ],
-    illustration: AdsLottie,
+    illustration: AdsSvg,
   },
   {
     title: "Mídias Sociais",
@@ -37,17 +36,7 @@ const solutionsData = [
       "Estratégias personalizadas para cada plataforma",
       "Maior presença digital",
     ],
-    illustration: SocialMediaLottie,
-  },
-  {
-    title: "Business Intelligence",
-    details: [
-      "Insights valiosos para o crescimento",
-      "Estratégias mais eficientes",
-      "Melhoria contínua de desempenho",
-      "Decisões baseadas em dados",
-    ],
-    illustration: BusinessLottie,
+    illustration: SocialMediaSvg,
   },
   {
     title: "Marketing de Conteúdo",
@@ -58,7 +47,7 @@ const solutionsData = [
       "Engajamento efetivo com o público",
       "Fortalecimento da imagem da empresa",
     ],
-    illustration: ContentLottie,
+    illustration: ContentSvg,
   },
 ];
 
@@ -74,12 +63,12 @@ export default function Solutions() {
   };
 
   return (
-    <section className="flex w-full w-full flex justify-center items-center py-20">
+    <section className="flex w-full w-full flex justify-center items-center py-14">
       <div
         id="solutions"
         className="w-content flex flex-col items-center relative md:px-0 px-8"
       >
-        <h1 className="mb-2 font-medium md:text-5xl text-4xl text-center text-transparent py-2 bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-600 leading-normal">
+        <h1 className="mb-16 font-medium md:text-5xl text-4xl text-center text-transparent py-2 bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-600 leading-normal">
           Soluções que fazem a diferença
         </h1>
 

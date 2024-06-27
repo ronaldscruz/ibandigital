@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import PlaceOrderButton from "../../common/PlaceOrderButton/PlaceOrderButton";
 import Link from "next/link";
 import MobileMenu from "./MobileMenu";
 import { motion } from "framer-motion";
@@ -48,29 +47,26 @@ export default function Navbar() {
           {renderOptions(DEFAULT_MENU_OPTIONS)}
         </ul>
 
-        <div className="flex items-center gap-4">
-          <PlaceOrderButton className="md:block hidden" />
-          <div className="xl:hidden block">
-            <motion.button
-              whileTap={{ scale: 0.87 }}
-              className="cursor-pointer border border-white rounded-full p-2"
-              onClick={() => {
-                setMobileMenuOpen(!mobileMenuOpen);
-              }}
-            >
-              <Image
-                src="/hamburger-menu.svg"
-                alt="Menu"
-                width={24}
-                height={24}
-              />
-            </motion.button>
-            <MobileMenu
-              open={mobileMenuOpen}
-              options={DEFAULT_MENU_OPTIONS}
-              onClose={() => setMobileMenuOpen(false)}
+        <div className="flex items-center gap-4 xl:hidden block">
+          <motion.button
+            whileTap={{ scale: 0.87 }}
+            className="cursor-pointer border border-white rounded-full p-2"
+            onClick={() => {
+              setMobileMenuOpen(!mobileMenuOpen);
+            }}
+          >
+            <Image
+              src="/hamburger-menu.svg"
+              alt="Menu"
+              width={24}
+              height={24}
             />
-          </div>
+          </motion.button>
+          <MobileMenu
+            open={mobileMenuOpen}
+            options={DEFAULT_MENU_OPTIONS}
+            onClose={() => setMobileMenuOpen(false)}
+          />
         </div>
       </div>
     </nav>
