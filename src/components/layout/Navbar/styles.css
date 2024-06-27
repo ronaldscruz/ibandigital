@@ -1,0 +1,35 @@
+.navbar {
+  transition: all 0.2s;
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+
+.navbar.fixed-on-top {
+  position: fixed;
+  top: 0 !important;
+  z-index: 10;
+  background: rgba(36, 36, 36, 0.75);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgba(16, 16, 16, 0.18);
+  z-index: 50;
+  transition: all 0.2s ease;
+}
+
+/* animate when scroll past, by setting position to fixed and then top -100 after */
+@keyframes scrollPast {
+  0% {
+    top: -20px;
+  }
+  100% {
+    top: -100px;
+  }
+}
+
+.navbar.scrolled-past {
+  position: fixed;
+  top: -100px;
+  animation: scrollPast 0.2s ease;
+}
