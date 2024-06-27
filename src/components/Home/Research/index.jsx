@@ -77,7 +77,7 @@ export default function Advantages() {
   const buttonScope = useAnimateButton(buttonInView);
 
   return (
-    <section className="relative flex w-full w-full flex justify-center text-white py-14 pb-[132px] bg-[url('/failure.webp')] bg-center bg-cover after:content-[' '] after:absolute after:top-0 after:left-0 after:bg-blue-800/70 after:w-full after:h-full">
+    <section className="relative flex w-full w-full flex justify-center text-white py-16 pb-[132px] bg-[url('/failure.webp')] bg-center bg-cover after:content-[' '] after:absolute after:top-0 after:left-0 after:bg-blue-800/70 after:w-full after:h-full">
       <div
         ref={sectionRef}
         className="w-content max-w-full flex flex-col items-center h-full z-10 md:px-0 px-6"

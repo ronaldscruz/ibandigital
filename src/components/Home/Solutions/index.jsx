@@ -63,12 +63,12 @@ export default function Solutions() {
   };
 
   return (
-    <section className="flex w-full w-full flex justify-center items-center py-14">
+    <section className="flex w-full w-full flex justify-center items-center py-16">
       <div
         id="solutions"
         className="w-content flex flex-col items-center relative md:px-0 px-8"
       >
-        <h1 className="mb-16 font-medium md:text-5xl text-4xl text-center text-transparent py-2 bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-700 sm:leading-normal leading-normal">
+        <h1 className="mb-20 font-medium md:text-5xl text-4xl text-center text-transparent py-2 bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-700 sm:leading-normal leading-normal">
           Soluções que fazem a diferença
         </h1>
 

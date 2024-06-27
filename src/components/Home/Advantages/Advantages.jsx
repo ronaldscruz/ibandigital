@@ -100,7 +100,7 @@ export default function Advantages() {
   };
 
   return (
-    <section className="relative flex w-full w-full flex justify-center py-14 pb-[132px] bg-[url('/team.webp')] bg-cover bg-left after:content-[' '] after:absolute after:top-0 after:left-0 after:bg-blue-800/90 after:w-full after:h-full">
+    <section className="relative flex w-full w-full flex justify-center py-16 pb-[132px] bg-[url('/team.webp')] bg-cover bg-left after:content-[' '] after:absolute after:top-0 after:left-0 after:bg-blue-800/90 after:w-full after:h-full">
       <div
         id="why-iban"
         className="w-content max-w-full flex flex-col items-center h-full z-10 md:px-0 px-6"
