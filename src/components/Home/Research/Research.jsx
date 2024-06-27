@@ -77,21 +77,21 @@ export default function Advantages() {
   const buttonScope = useAnimateButton(buttonInView);
 
   return (
-    <section className="relative flex w-full w-full flex justify-center text-white py-20 pb-[132px] bg-[url('/failure.webp')] bg-center bg-cover after:content-[' '] after:absolute after:top-0 after:left-0 after:bg-blue-800/70 after:w-full after:h-full">
+    <section className="relative flex w-full w-full flex justify-center text-white py-14 pb-[132px] bg-[url('/failure.webp')] bg-center bg-cover after:content-[' '] after:absolute after:top-0 after:left-0 after:bg-blue-800/70 after:w-full after:h-full">
       <div
         ref={sectionRef}
         className="w-content max-w-full flex flex-col items-center h-full z-10 md:px-0 px-6"
       >
         <div ref={sectionScope} className=" flex flex-col items-center w-full">
           <h1 className="font-light md:text-2xl text-2xl">Você sabia?</h1>
-          <h2 className="font-medium md:text-5xl text-4xl my-20 w-[800px] max-w-full text-center md:leading-normal leading-normal">
+          <h2 className="font-medium md:text-5xl text-4xl my-12 w-[800px] max-w-full text-center md:leading-normal leading-normal">
             A cada minuto, 4 empresas fecharam no Brasil em 2023
           </h2>
         </div>
 
         <div ref={dataRef}>
           <ul ref={dataScope} className="flex flex-col">
-            <li className="flex flex-col items-center mb-20">
+            <li className="flex flex-col items-center mb-14">
               <span className="font-bold text-5xl">
                 <CountUp
                   end={dataInView ? 2153840 : 0}
@@ -101,7 +101,7 @@ export default function Advantages() {
               </span>
               negócios extintos
             </li>
-            <li className="flex flex-col items-center mb-20">
+            <li className="flex flex-col items-center mb-14">
               <span className="font-bold text-5xl">
                 <CountUp
                   end={dataInView ? 25.7 : 0}
@@ -116,7 +116,7 @@ export default function Advantages() {
           </ul>
         </div>
 
-        <p className="text-2xl flex flex-col items-center text-center gap-6 mb-20">
+        <p className="text-2xl flex flex-col items-center text-center gap-6 mb-14">
           <span>Não deixe sua empresa se tornar estatística.</span>
           <span>
             Conte com a <span className="font-medium">Iban</span> para

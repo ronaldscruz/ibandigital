@@ -44,15 +44,17 @@ export default function Contact() {
   };
 
   return (
-    <section className="relative flex w-full w-full flex justify-center py-20 pb-32 bg-white md:rounded-[64px] rounded-[32px] mt-[-64px]">
+    <section className="relative flex w-full w-full flex justify-center py-14 pb-32 bg-white md:rounded-[64px] rounded-[32px] mt-[-64px]">
       <div
         ref={ref}
         className="w-content max-w-full flex flex-col items-center h-full z-10"
       >
         <div className="w-full flex flex-col items-center h-full z-10 md:px-0 px-6">
-          <h1 className="font-light md:text-2xl text-2xl">Entre em contato</h1>
-          <h2 className="font-medium md:text-5xl text-4xl my-20 w-[800px] max-w-full text-center md:leading-normal leading-normal">
-            Quero transformar meu negócio
+          <h1 className="font-light md:text-2xl text-2xl">
+            Como podemos ajudar?
+          </h1>
+          <h2 className="font-medium md:text-5xl text-4xl my-12 w-[800px] max-w-full text-center md:leading-normal leading-normal">
+            Entre em contato
           </h2>
           <form
             className="flex flex-col gap-4 w-full justify-center items-center relative"
