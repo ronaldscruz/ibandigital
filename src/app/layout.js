@@ -3,6 +3,7 @@ import "./globals.css";
 import Head from "next/head";
 import Navbar from "@/components/layout/Navbar";
 import FloatingWhatsappButton from "@/components/layout/FloatingWhatsappButton";
+import Footer from "@/components/layout/Footer";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -50,9 +51,7 @@ export default function RootLayout({ children }) {
           {children}
         </main>
         
-        <footer className="">
-          
-        </footer>
+        <Footer />
 
         <FloatingWhatsappButton />
       </body>

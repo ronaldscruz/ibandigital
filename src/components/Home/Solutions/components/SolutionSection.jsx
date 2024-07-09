@@ -43,6 +43,7 @@ export default function SolutionSection({
   title,
   details = [],
   illustration = "",
+  id,
   reverse = false,
 }) {
   const ref = useRef();
@@ -50,7 +51,7 @@ export default function SolutionSection({
   const scope = useSectionAnimation(inView);
 
   return (
-    <div ref={ref}>
+    <div id={id} ref={ref}>
       <article
         ref={scope}
         className="lg:w-[900px] max-w-screen lg:inline-flex flex lg:flex-row flex-col-reverse justify-between items-center mb-20"

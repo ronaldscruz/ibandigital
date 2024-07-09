@@ -28,7 +28,7 @@ export default function Navbar() {
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [fixedOnTop, setFixedOnTop] = useState(false);
 
-  const decideNavbarClasses = useMemo(() => {
+  const navbarClasses = useMemo(() => {
     if (isOnTopOfPage) return "";
 
     let classes = "";
@@ -69,7 +69,7 @@ export default function Navbar() {
   return (
     <nav
       className={`flex justify-center py-4 xl:py-5 w-full z-20 navbar 
-      ${decideNavbarClasses}`}
+      ${navbarClasses}`}
     >
       <div className="flex justify-between items-center h-full w-content max-w-full px-5 xl:px-0">
         <Link href="/">
