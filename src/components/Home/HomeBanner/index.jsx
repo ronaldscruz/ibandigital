@@ -7,7 +7,7 @@ export default function HomeBanner() {
   return (
     <section
       id="home-banner"
-      className="flex w-full h-[94vh] justify-center bg-black"
+      className="flex w-full h-[94vh] justify-center bg-black "
     >
       <div className="flex flex-col justify-center items-center h-full w-content max-w-full z-10 xl:p-0 p-6">
         <h1

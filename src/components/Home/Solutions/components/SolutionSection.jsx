@@ -51,7 +51,7 @@ export default function SolutionSection({
   const scope = useSectionAnimation(inView);
 
   return (
-    <div id={id} ref={ref}>
+    <div id={id} ref={ref} className="scroll-mt-48">
       <article
         ref={scope}
         className="lg:w-[900px] max-w-screen lg:inline-flex flex lg:flex-row flex-col-reverse justify-between items-center mb-20"

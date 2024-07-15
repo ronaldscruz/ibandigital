@@ -55,7 +55,9 @@ export default function Footer() {
   const renderSolutionLinks = (solutions = []) => {
     return solutions.map((solution) => (
       <li key={solution.id} className="text-sm">
-        <a href={`#${solution.id}`}>{solution.title}</a>
+        <a href={`#${solution.id}`} className="hover:underline">
+          {solution.title}
+        </a>
       </li>
     ));
   };
