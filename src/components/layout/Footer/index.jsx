@@ -13,11 +13,78 @@ import {
 } from "@/constants";
 import { solutionsData } from "@/components/Home/Solutions/constants";
 
+const usefulLinksData = [
+  {
+    label: "Entre em contato",
+    url: "#contact-form",
+  },
+  {
+    label: "Diferenciais",
+    url: "#why-iban",
+  },
+  {
+    label: "Voltar para o topo",
+    url: "#home-banner",
+  },
+];
+
+const socialMediaData = {
+  instagram: {
+    icon: InstagramSvg,
+    url: `https://instagram.com/${INSTAGRAM_USERNAME}`,
+    label: `@${INSTAGRAM_USERNAME}`,
+  },
+  email: {
+    icon: EmailSvg,
+    url: `mailto:${EMAIL}`,
+    label: EMAIL,
+  },
+  whatsapp: {
+    icon: WhatsappSvg,
+    url: `https://wa.me/${WAPP_NUMBER}`,
+    label: FORMATTED_WAPP_NUMBER,
+  },
+  facebook: {
+    icon: FacebookSvg,
+    url: `https://facebook.com/profile.php?id=${FACEBOOK_USERNAME}`,
+    label: "Iban Digital",
+  },
+};
+
 export default function Footer() {
   const renderSolutionLinks = (solutions = []) => {
     return solutions.map((solution) => (
       <li key={solution.id} className="text-sm">
         <a href={`#${solution.id}`}>{solution.title}</a>
+      </li>
+    ));
+  };
+
+  const renderSocialMediaLinks = (socialMedia = {}) => {
+    return Object.keys(socialMedia).map((key) => {
+      const { icon, url, label } = socialMedia[key];
+      return (
+        <li key={key} className="text-sm flex">
+          <Image src={icon} width={18} height={18} alt={`Ícone do ${key}`} />
+          <a
+            className="ml-2 hover:underline"
+            href={url}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {label}
+          </a>
+        </li>
+      );
+    });
+  };
+
+  const renderUsefulLinks = (usefulLinks) => {
+    return usefulLinks.map((link) => (
+      <li key={link.label} className="text-sm">
+        <a href={link.url} className="hover:underline">
+          {link.label}
+        </a>
       </li>
     ));
   };
@@ -49,65 +116,13 @@ export default function Footer() {
           <section id="footer-useful-links" className="md:w-[unset] w-[280px]">
             <h3 className="text-lg font-medium">Links úteis</h3>
             <ul className="mt-4 flex flex-col gap-3">
-              <li className="text-sm">Sobre nós</li>
-              <li className="text-sm">Blog</li>
-              <li className="text-sm">Contato</li>
-              <li className="text-sm">FAQ</li>
+              {renderUsefulLinks(usefulLinksData)}
             </ul>
           </section>
           <section id="footer-medias" className="md:w-[unset] w-[280px]">
             <h3 className="text-lg font-medium">Mídias e contato</h3>
             <ul className="mt-4 flex flex-col gap-3">
-              <li className="text-sm flex">
-                <Image
-                  src={InstagramSvg}
-                  width={18}
-                  height={18}
-                  alt="Ícone da rede social Instagram"
-                />
-                <a
-                  className="ml-2"
-                  href={`https://instagram.com/${INSTAGRAM_USERNAME}`}
-                >
-                  @{INSTAGRAM_USERNAME}
-                </a>
-              </li>
-              <li className="text-sm flex">
-                <Image
-                  src={EmailSvg}
-                  width={18}
-                  height={18}
-                  alt="Ícone de correspondência de e-mail"
-                />
-                <a className="ml-2" href={`mailto:${EMAIL}`}>
-                  {EMAIL}
-                </a>
-              </li>
-              <li className="text-sm flex">
-                <Image
-                  src={WhatsappSvg}
-                  width={18}
-                  height={18}
-                  alt="Ícone do aplicativo WhatsApp"
-                />
-                <a className="ml-2" href={`https://wa.me/${WAPP_NUMBER}`}>
-                  {FORMATTED_WAPP_NUMBER}
-                </a>
-              </li>
-              <li className="text-sm flex">
-                <Image
-                  src={FacebookSvg}
-                  width={18}
-                  height={18}
-                  alt="Ícone da rede social Facebook"
-                />
-                <a
-                  className="ml-2"
-                  href={`https://facebook.com/${FACEBOOK_USERNAME}`}
-                >
-                  Iban Digital
-                </a>
-              </li>
+              {renderSocialMediaLinks(socialMediaData)}
             </ul>
           </section>
         </div>

@@ -5,7 +5,10 @@ import BannerBackgroundImage from "./assets/home-banner-background.webp";
 
 export default function HomeBanner() {
   return (
-    <section className="flex w-full h-[94vh] justify-center bg-black">
+    <section
+      id="home-banner"
+      className="flex w-full h-[94vh] justify-center bg-black"
+    >
       <div className="flex flex-col justify-center items-center h-full w-content max-w-full z-10 xl:p-0 p-6">
         <h1
           className="text-white font-bold text-3xl md:text-5xl w-[800px] max-w-full leading-normal text-center leading-normal md:leading-normal"
