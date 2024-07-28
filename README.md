@@ -10,7 +10,7 @@ Iban Digital website clearly explains what our company does and promotes our ser
 
 The user interface was completely designed by me to offer an intuitive and engaging user experience.
 
-### Perfect SEO and accessibility
+### Perfect SEO, accessibility and metatags integration
 
 Achieves a perfect score of 100 in SEO, accessibility, performance, and best practices, ensuring top-notch quality and user satisfaction. It got ranked third on the first page of Google search results, showcasing its strong SEO and relevance.
 
@@ -22,9 +22,11 @@ Achieves a perfect score of 100 in SEO, accessibility, performance, and best pra
 
 ![Screenshot showcasing Iban Digital website benchmarking results](./readme-assets/iban-lighthouse-results.png)
 
+#### Social Media Meta Tags (aka Open Graph)
+
+![Screenshot showcasing Iban Digital social media metatags in action](./readme-assets/opengraph.png)
+
 ## Tech Stack
 
 - **Next.js 14:** Utilizes the latest version of Next.js, leveraging its powerful features for optimal performance and scalability.
 - **Tailwind CSS:** Employs Tailwind CSS for fast and efficient styling, ensuring a consistent and modern design.
-
-## Project Background
